@@ -11,6 +11,7 @@ import { map, shareReplay } from 'rxjs/operators';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { routes } from '../../app.routes';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -32,6 +33,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 export class LayoutComponent {
 
+  constructor(private router: Router) { }
+
   rootRoutes = routes.filter((r: any) => r.path);
 
   private breakpointObserver = inject(BreakpointObserver);
@@ -43,5 +46,9 @@ export class LayoutComponent {
       shareReplay()
     );
 
+  changePath(path: any) {
+    console.log(path)
+    this.router.navigate(['/' + path]);
+  }
 
 }

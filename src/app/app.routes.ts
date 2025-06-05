@@ -1,68 +1,27 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { WaveformFitterComponent } from './home/waveform-fitter/waveform-fitter.component';
+import { StellariumComponent } from './home/stellarium/stellarium.component';
+import { D3celestialComponent } from './home/d3celestial/d3celestial.component';
+import { SignalProcessingComponent } from './home/signal-processing/signal-processing.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
 
 export const routes: Routes = [
+
+  // Define main routes
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'waveform-fitter',
-  },
-  {
-    path: 'waveform-fitter',
-    loadComponent: () =>
-      import('./home/waveform-fitter/waveform-fitter.component').then(
-        (c) => c.WaveformFitterComponent
-      ),
-    title: 'Waveform Fitter',
-    data: {
-      title: 'Waveform Fitter'
-    }
-  },
-  {
-    path: 'stellarium',
-    loadComponent: () =>
-      import('./home/stellarium/stellarium.component').then(
-        (c) => c.StellariumComponent
-      ),
-    title: 'Stellarium',
-    data: {
-      title: 'Stellarium'
-    }
-  },
-  {
-    path: 'd3celestial',
-    loadComponent: () =>
-      import('./home/d3celestial/d3celestial.component').then(
-        (c) => c.D3celestialComponent
-      ),
-    title: 'D3 Celestial',
-    data: {
-      title: 'D3 Celestial'
-    }
+    path: 'home', component: HomeComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'waveform-fitter', component: WaveformFitterComponent },
+      { path: 'stellarium', component: StellariumComponent },
+      { path: 'd3celestial', component: D3celestialComponent },
+      { path: 'signal-processing', component: SignalProcessingComponent },
+    ]
   },
 
-  
+  // Redirect root path '' to '/home'
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 
-  // {
-  //   path: 'sky-viewer',
-  //   loadComponent: () =>
-  //     import('./home/sky-viewer/sky-viewer.component').then(
-  //       (c) => c.SkyViewerComponent
-  //     ),
-  //   title: 'Sky Viewer',
-  //   data: {
-  //     title: 'Sky Viewer'
-  //   }
-  // },
-
-  {
-    path: 'signal-processing',
-    loadComponent: () =>
-      import('./home/signal-processing/signal-processing.component').then(
-        (c) => c.SignalProcessingComponent
-      ),
-    title: 'Signal Processing',
-    data: {
-      title: 'Signal Processing'
-    }
-  },
 ];

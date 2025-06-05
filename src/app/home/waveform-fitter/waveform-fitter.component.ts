@@ -229,7 +229,12 @@ export class WaveformFitterComponent {
   total_score_color = "white"
   score() {
     const max_dist = Math.pow(Math.pow(420 - 800, 2) + Math.pow(80 - 20, 2), 1 / 2)
+
+    
     const total_dist = Math.pow(Math.pow(420 - this.distance, 2) + Math.pow(80 - this.totalMass, 2), 1 / 2)
+
+
+
     this.total_score = Math.round(100 * (100 * ((max_dist - total_dist) / max_dist))) / 100
     if (this.total_score < 80) {
       this.total_score_color = "#800000"

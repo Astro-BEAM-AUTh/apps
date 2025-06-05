@@ -1,0 +1,106 @@
+// HEADER
+.toolbar {
+    position: absolute;
+    top: 0;
+    height: 64px;
+    width: 100%;
+    // background-color: var(--color-primary);
+    box-shadow: 0 1px 2px -1px var(--color-secondary) !important;
+    z-index: 3 !important;
+}
+
+.toolbar-logo {
+    height: 70%;
+}
+
+.toolbar-title {
+    color: var(--color-accent);
+    padding-left: 2rem;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar-logout {
+    background-color: var(--color-warn);
+    color: var(--color-accent);
+}
+
+
+.container {
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    bottom: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.container-main {
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    bottom: 40px;
+    // background-color: black;
+    background-image: url('../../../public/img/background-dark.jpg');
+}
+
+.apps-icon {
+    font-size: 150px;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.apps-button {
+    border-radius: 5px;
+    background-color: #E0B732;
+    color: var(--color-primary) !important;
+}
+
+.dashboard-card-disabled {
+    opacity: 0.35;
+    // pointer-events: none;
+    /* Disables click events */
+}
+
+.dashboard-card-disabled:hover {
+    cursor: not-allowed;
+}
+
+
+
+
+.sidenav-container {
+    height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    box-shadow: 0 -1px 2px -1px var(--color-secondary) !important;
+    z-index: 3 !important;
+}
+
+.footer-copyright {
+    font-size: small;
+    font-weight: normal;
+    color: var(--color-accent);
+}
+
+.footer-link {
+    font-size: small;
+    font-weight: normal;
+    color: var(--color-secondary);
+    text-decoration: none;
+}
