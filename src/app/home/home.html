@@ -1,0 +1,31 @@
+<mat-toolbar class="toolbar">
+    <img src="img/logo.png" class="toolbar-logo">
+    <span class="toolbar-title">ASTRO - Applications</span>
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="dashboardToolbarMenu" style="color: var(--color-accent);"
+        matTooltip="More">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #dashboardToolbarMenu="matMenu">
+        <button mat-menu-item (click)="openApplication('dashboard')">
+            <mat-icon style="color: var(--color-warn);">home</mat-icon>
+            <span style="color: var(--color-warn);">Dashboard</span>
+        </button>
+        <mat-divider></mat-divider>
+        @for (app of apps; track app) {
+        @if (app.url != 'dashboard') {
+        <button mat-menu-item (click)="openApplication(app.url)" [disabled]="!app.active">
+            <mat-icon style="color: var(--color-warn);">{{app.icon}}</mat-icon>
+            <span style="color: var(--color-warn);">{{app.title}}</span>
+        </button>
+        }
+        }
+    </mat-menu>
+</mat-toolbar>
+
+<div class="container-main">
+    <router-outlet></router-outlet>
+</div>
+
+<mat-toolbar class="footer">
+</mat-toolbar>

@@ -1,0 +1,209 @@
+<mat-drawer-container class="d3-container" autosize>
+    <mat-drawer #drawer class="d3-sidenav" mode="over" [opened]="false">
+        <form [formGroup]="optionsForm">
+
+
+            <div style="padding: 0 1rem;">
+
+
+
+                <!-- LOCATION -->
+                <p>Location</p>
+                <mat-form-field style="width: 100%">
+                    <input matInput type="number" id="lat" title="Latitude" placeholder="Latitude" max="90" min="-90"
+                        step="0.0001" formControlName="centerLat">
+                </mat-form-field>
+                <mat-form-field style="width: 100%">
+                    <input matInput type="number" id="lon" title="Longitude" placeholder="Longitude" max="180"
+                        min="-180" step="0.0001" formControlName="centerLon">
+                </mat-form-field>
+                <button matFab extended style="width: 100%" matTooltip="Here" (click)="here()">
+                    <mat-icon>my_location</mat-icon>
+                    Here
+                </button>
+                <pre></pre>
+                <mat-divider></mat-divider>
+
+
+
+                <!-- DATE / TIME -->
+                <p>Date/time</p>
+                <mat-form-field style="width: 100%">
+                    <input matInput [matDatepicker]="picker" formControlName="date">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field style="width: 100%">
+                    <input type="text" matInput [matTimepicker]="timepicker" formControlName="datetime">
+                    <mat-timepicker-toggle matSuffix [for]="timepicker"></mat-timepicker-toggle>
+                    <mat-timepicker #timepicker></mat-timepicker>
+                </mat-form-field>
+                <button matFab extended style="width: 100%" matTooltip="Now" (click)="now()">
+                    <mat-icon>update</mat-icon>
+                    Now
+                </button>
+
+
+
+                <!-- PROJECTION -->
+                <p>Projection</p>
+                <mat-form-field style="width: 100%">
+                    <mat-select (selectionChange)="changeProjection()" formControlName="projection">
+                        <mat-option value="airy">Airy’s Minimum Error (hemi)</mat-option>
+                        <mat-option value="aitoff">Aitoff</mat-option>
+                        <mat-option value="armadillo">Armadillo</mat-option>
+                        <mat-option value="august">August</mat-option>
+                        <mat-option value="azimuthalEqualArea">Azimuthal Equal Area (hemi)</mat-option>
+                        <mat-option value="azimuthalEquidistant">Azimuthal Equidistant (hemi)</mat-option>
+                        <mat-option value="baker">Baker Dinomic</mat-option>
+                        <mat-option value="berghaus">Berghaus Star (hemi)</mat-option>
+                        <mat-option value="boggs">Boggs Eumorphic</mat-option>
+                        <mat-option value="bonne">Bonne</mat-option>
+                        <mat-option value="bromley">Bromley</mat-option>
+                        <mat-option value="cassini">Cassini (hemi)</mat-option>
+                        <mat-option value="collignon">Collignon</mat-option>
+                        <mat-option value="craig">Craig Retroazimuthal (hemi)</mat-option>
+                        <mat-option value="craster">Craster Parabolic</mat-option>
+                        <mat-option value="cylindricalEqualArea">Cylindrical Equal Area</mat-option>
+                        <mat-option value="cylindricalStereographic">Cylindrical Stereographic</mat-option>
+                        <mat-option value="eckert1">Eckert I</mat-option>
+                        <mat-option value="eckert2">Eckert II</mat-option>
+                        <mat-option value="eckert3">Eckert III</mat-option>
+                        <mat-option value="eckert4">Eckert IV</mat-option>
+                        <mat-option value="eckert5">Eckert V</mat-option>
+                        <mat-option value="eckert6">Eckert VI</mat-option>
+                        <mat-option value="eisenlohr">Eisenlohr</mat-option>
+                        <mat-option value="equirectangular">Equirectangular</mat-option>
+                        <mat-option value="fahey">Fahey</mat-option>
+                        <mat-option value="mtFlatPolarParabolic">Flat Polar Parabolic</mat-option>
+                        <mat-option value="mtFlatPolarQuartic">Flat Polar Quartic</mat-option>
+                        <mat-option value="mtFlatPolarSinusoidal">Flat Polar Sinusoidal</mat-option>
+                        <mat-option value="foucaut">Foucaut</mat-option>
+                        <mat-option value="ginzburg4">Ginzburg IV</mat-option>
+                        <mat-option value="ginzburg5">Ginzburg V</mat-option>
+                        <mat-option value="ginzburg6">Ginzburg VI</mat-option>
+                        <mat-option value="ginzburg8">Ginzburg VIII</mat-option>
+                        <mat-option value="ginzburg9">Ginzburg IX</mat-option>
+                        <mat-option value="homolosine">Goode Homolosine</mat-option>
+                        <mat-option value="hammer">Hammer</mat-option>
+                        <mat-option value="hatano">Hatano</mat-option>
+                        <mat-option value="healpix">HEALPix</mat-option>
+                        <mat-option value="hill">Hill Eucyclic</mat-option>
+                        <mat-option value="kavrayskiy7">Kavrayskiy VII</mat-option>
+                        <mat-option value="lagrange">Lagrange</mat-option>
+                        <mat-option value="larrivee">l'Arrivée</mat-option>
+                        <mat-option value="laskowski">Laskowski Tri-Optimal</mat-option>
+                        <mat-option value="loximuthal">Loximuthal</mat-option>
+                        <mat-option value="mercator">Mercator</mat-option>
+                        <mat-option value="miller">Miller</mat-option>
+                        <mat-option value="mollweide">Mollweide</mat-option>
+                        <mat-option value="naturalEarth">Natural Earth</mat-option>
+                        <mat-option value="nellHammer">Nell Hammer</mat-option>
+                        <mat-option value="orthographic">Orthographic (hemi)</mat-option>
+                        <mat-option value="patterson">Patterson Cylindrical</mat-option>
+                        <mat-option value="polyconic">Polyconic</mat-option>
+                        <mat-option value="quincuncial">Quincuncial</mat-option>
+                        <mat-option value="rectangularPolyconic">Rectangular Polyconic</mat-option>
+                        <mat-option value="robinson">Robinson</mat-option>
+                        <mat-option value="sinusoidal">Sinusoidal</mat-option>
+                        <mat-option value="stereographic">Stereographic (hemi)</mat-option>
+                        <mat-option value="times">Times</mat-option>
+                        <mat-option value="twoPointEquidistant">Two-Point Equidistant (hemi)</mat-option>
+                        <mat-option value="vanDerGrinten">van Der Grinten</mat-option>
+                        <mat-option value="vanDerGrinten2">van Der Grinten II</mat-option>
+                        <mat-option value="vanDerGrinten3">van Der Grinten III</mat-option>
+                        <mat-option value="vanDerGrinten4">van Der Grinten IV</mat-option>
+                        <mat-option value="wagner4">Wagner IV</mat-option>
+                        <mat-option value="wagner6">Wagner VI</mat-option>
+                        <mat-option value="wagner7">Wagner VII</mat-option>
+                        <mat-option value="wiechel">Wiechel (hemi)</mat-option>
+                        <mat-option value="winkel3">Winkel Tripel</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+
+
+                <!-- COORDINATES -->
+                <p>Coordinates**</p>
+                <mat-form-field style="width: 100%">
+                    <mat-select formControlName="coordinates">
+                        <mat-option value="equatorial">Equatorial</mat-option>
+                        <mat-option value="ecliptic">Ecliptic</mat-option>
+                        <mat-option value="galactic">Galactic</mat-option>
+                        <mat-option value="supergalactic">Supergalactic</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+
+
+                <!-- CENTER -->
+                <p>Center</p>
+
+
+
+                <!-- SUN -->
+                <p>Sun</p>
+
+
+
+                <!-- LINES -->
+                <p>Lines</p>
+                <mat-slide-toggle style="width: 100%; margin-bottom: 1rem;"
+                    formControlName="graticule">Graticule</mat-slide-toggle>
+                <mat-slide-toggle style="width: 100%; margin-bottom: 1rem;"
+                    formControlName="equator">Equator</mat-slide-toggle>
+                <mat-slide-toggle style="width: 100%; margin-bottom: 1rem;"
+                    formControlName="ecliptic">Ecliptic</mat-slide-toggle>
+                <mat-slide-toggle style="width: 100%; margin-bottom: 1rem;" formControlName="galacticPlane">Galactic
+                    plane</mat-slide-toggle>
+                <mat-slide-toggle style="width: 100%; margin-bottom: 1rem;"
+                    formControlName="supergalacticPlane">Supergalactic plane</mat-slide-toggle>
+
+
+            </div>
+
+
+        </form>
+        <!-- <button matButton="filled" (click)="run()">Run</button> -->
+    </mat-drawer>
+    <div class="d3-content" style="color: white;">
+        <button matFab class="d3-content-button" matTooltip="Settings" (click)="drawer.toggle()">
+            <mat-icon>settings</mat-icon>
+        </button>
+        <div #celestialMap id="celestial-map" style="height: 100%; width: 100%; margin: auto;"></div>
+    </div>
+</mat-drawer-container>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -->
+
+
+
+
+
+<!-- -->
+
+
+<!-- 
+
+
+
+
+<p>Milky Way</p>
+
+
+
+
+
+
+<div #chart2 id="celestial-fields" style="width: 100px; height: 100px; background-color: aliceblue;"></div> -->
