@@ -116,7 +116,7 @@ export class D3celestial implements AfterViewInit {
       container: this.celestialMap.nativeElement.id,
       width: this.celestialMap.nativeElement.clientWidth -5,
       height: this.celestialMap.nativeElement.offsetHeight,
-      datapath: '/celestial/data/',
+      datapath: 'celestial/data/',
       form: false,
       projection: 'aitoff',
       transform: 'equatorial'
