@@ -1,0 +1,12 @@
+<div style="max-width: 800px;">
+    <div class="controls" style="display:flex; gap:12px; align-items:center; margin-bottom:8px;">
+        <button (click)="rerunNoise()"
+            style="padding:6px 10px; border-radius:8px; border:1px solid #ddd; cursor:pointer;">
+            Rerun noise
+        </button>
+        <span style="font-size:12px; color:#666;">μ={{mean}}, σ={{stDeviation}}</span>
+    </div>
+    <div style="height:360px;">
+        <canvas #chartCanvas></canvas>
+    </div>
+</div>

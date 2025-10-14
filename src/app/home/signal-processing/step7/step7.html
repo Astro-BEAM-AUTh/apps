@@ -1,0 +1,17 @@
+<div style="max-width: 1000px; display:flex; gap:12px; align-items:center; margin-bottom:10px;">
+    <button (click)="regenerate()" style="padding:6px 10px; border-radius:8px; border:1px solid #ddd; cursor:pointer;">
+        Regenerate
+    </button>
+    <span style="font-size:12px; color:#666;">
+        segments={{numSegments}}, samples={{numSamples}}, σ(noise)=0.10,
+        center={{lineCenter}}, width={{lineWidth}}, amp={{lineAmplitude}}
+    </span>
+</div>
+
+<!-- Heatmap: Spectral waterfall -->
+<plotly-plot [data]="heatmapData" [layout]="heatmapLayout" [config]="plotConfig"></plotly-plot>
+
+<div style="height:16px;"></div>
+
+<!-- Line plot: clean spectral vs mean of noisy waterfall -->
+<plotly-plot [data]="lineData" [layout]="lineLayout" [config]="plotConfig"></plotly-plot>

@@ -1,0 +1,12 @@
+<div style="max-width: 1000px; display:flex; gap:12px; align-items:center; margin-bottom:10px;">
+    <button (click)="regenerate()" style="padding:6px 10px; border-radius:8px; border:1px solid #ddd; cursor:pointer;">
+        Regenerate
+    </button>
+    <span style="font-size:12px; color:#666;">
+        segments={{numSegments}}, samples={{numSamples}},
+        μ={{mean}}, σ={{stDeviation}},
+        line: f0={{lineCenter}}, width={{lineWidth}}, amp={{lineAmplitude}}
+    </span>
+</div>
+
+<plotly-plot [data]="plotData" [layout]="layout" [config]="config"></plotly-plot>

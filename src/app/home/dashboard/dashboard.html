@@ -5,13 +5,17 @@
     <mat-card appearance="outlined" style="width: 280px;">
         <mat-card-header>
             <mat-card-title style="color: white;">{{app.title}}</mat-card-title>
+            @if (app.subtitle == '.') {
+            <mat-card-subtitle style="opacity: 0;">{{app.subtitle}}</mat-card-subtitle>
+            } @else {
             <mat-card-subtitle>{{app.subtitle}}</mat-card-subtitle>
+            }
         </mat-card-header>
         <mat-card-content style="text-align: center; padding: 5px;">
             <mat-icon class="apps-icon">{{app.icon}}</mat-icon>
         </mat-card-content>
         <mat-card-actions align="end">
-            <button mat-button class="apps-button" (click)="openApplication(app.url)">Open</button>
+            <button matButton="filled" (click)="openApplication(app.url)">Open</button>
         </mat-card-actions>
     </mat-card>
     } @else {
@@ -19,13 +23,17 @@
         matTooltip="Not available for this user">
         <mat-card-header>
             <mat-card-title style="color: white;">{{app.title}}</mat-card-title>
+            @if (app.subtitle == '.') {
+            <mat-card-subtitle style="opacity: 0;">{{app.subtitle}}</mat-card-subtitle>
+            } @else {
             <mat-card-subtitle>{{app.subtitle}}</mat-card-subtitle>
+            }
         </mat-card-header>
         <mat-card-content style="text-align: center; padding: 5px;">
             <mat-icon class="apps-icon">{{app.icon}}</mat-icon>
         </mat-card-content>
         <mat-card-actions align="end">
-            <button mat-button class="apps-button" disabled>Open</button>
+            <button mat-button disabled>Open</button>
         </mat-card-actions>
     </mat-card>
     }

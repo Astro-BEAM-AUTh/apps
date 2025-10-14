@@ -1,2 +1,15 @@
 npm run github-build
 
+npm run github-deploy
+
+
+
+
+
+ng s  --proxy-config proxy.conf.json
+
+
+
+
+
+

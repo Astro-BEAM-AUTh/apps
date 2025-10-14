@@ -1,0 +1,16 @@
+<div style="max-width: 1000px; display:flex; gap:12px; align-items:center; margin-bottom:10px;">
+    <button (click)="regenerate()" style="padding:6px 10px; border-radius:8px; border:1px solid #ddd; cursor:pointer;">
+        Regenerate
+    </button>
+    <span style="font-size:12px; color:#666;">
+        segments={{numSegments}}, μ={{mean}}, σ={{stDeviation}},
+        line_center={{lineCenter}}, width={{lineWidth}}, amp={{lineAmplitude}}
+    </span>
+</div>
+
+<!-- Heatmap: Waterfall (ON) -->
+<plotly-plot [data]="heatmapData" [layout]="heatmapLayout" [config]="plotConfig" className="plotly-plot"></plotly-plot>
+
+<!-- Line plot: Background, Spectral-only, Background+Spectral -->
+<div style="height: 16px;"></div>
+<plotly-plot [data]="lineData" [layout]="lineLayout" [config]="plotConfig"></plotly-plot>

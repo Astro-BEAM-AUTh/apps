@@ -40,7 +40,7 @@ export class configService {
             subtitle: '.',
             icon: 'sensors',
             url: 'signal-processing',
-            active: false
+            active: true
         }
     ]
 

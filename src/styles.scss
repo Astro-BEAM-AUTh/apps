@@ -5,7 +5,7 @@
 
 html {
   color-scheme: dark;
-  @include mat.theme((color: mat.$violet-palette,
+  @include mat.theme((color: mat.$yellow-palette,
       typography: Roboto,
       density: 0));
 
@@ -17,10 +17,9 @@ html {
 
 
 $my-theme: mat.define-theme((color: (theme-type: dark,
-        primary: mat.$violet-palette,
+        primary: mat.$yellow-palette,
       ),
-      typography: (brand-family: 'Comic Sans',
-        bold-weight: 900),
+      typography: (brand-family: 'Roboto'),
       density: (scale: -1)));
 
 
@@ -38,4 +37,10 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-drawer,
+.mat-drawer-opened,
+.mat-drawer-side {
+  border-radius: 0 !important;
 }

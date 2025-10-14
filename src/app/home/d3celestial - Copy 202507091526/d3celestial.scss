@@ -1,0 +1,47 @@
+.d3-container {
+  width: 100%;
+  height: 100%;
+}
+
+.d3-sidenav {
+//   padding: 20px;
+  width: 350px;
+  border-right: 1px solid #555;
+
+
+}
+
+.d3-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.d3-content-button {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 10;
+}
+
+
+
+
+.location {
+    // width: 100%;
+    // display: grid;
+    // grid-column-gap: 1rem;
+    // grid-template-columns: 1fr 1fr 48px;
+}
+
+.projection {
+    // width: 100%;
+}
+
+.datetime {
+    // width: 100%;
+    // display: grid;
+    // grid-column-gap: 1rem;
+    // grid-template-columns: 1fr 1fr 48px;
+}
