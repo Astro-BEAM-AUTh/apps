@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "github-build": "ng build --configuration production --base-href https://astro-beam.github.io/astro-apps/",
+    "github-build": "ng build --configuration production --base-href https://astro-beam-auth.github.io/apps/",
     "github-deploy": "npx angular-cli-ghpages --dir=dist/astro-apps/browser --no-silent"
   },
   "private": true,
