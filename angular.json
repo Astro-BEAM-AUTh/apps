@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "astro-apps": {
+    "apps": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "astro-apps:build:production"
+              "buildTarget": "apps:build:production"
             },
             "development": {
-              "buildTarget": "astro-apps:build:development"
+              "buildTarget": "apps:build:development"
             }
           },
           "defaultConfiguration": "development"

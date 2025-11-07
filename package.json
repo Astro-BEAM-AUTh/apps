@@ -1,5 +1,5 @@
 {
-  "name": "astro-apps",
+  "name": "apps",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "github-build": "ng build --configuration production --base-href https://astro-beam-auth.github.io/apps/",
-    "github-deploy": "npx angular-cli-ghpages --dir=dist/astro-apps/browser --no-silent"
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/apps/browser --no-silent"
   },
   "private": true,
   "dependencies": {
