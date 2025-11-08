@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "github-build": "ng build --configuration production --base-href https://apps.astrobeam.gr/",
+    "github-build": "ng build --configuration production --base-href https://applications.astrobeam.gr/",
     "github-deploy": "npx angular-cli-ghpages --dir=dist/apps/browser --no-silent"
   },
   "private": true,
