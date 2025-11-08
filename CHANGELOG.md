@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- insertion marker -->
 
+## [1.0.2](https://github.com/Astro-BEAM-AUTh/apps/compare/v1.0.1...v1.0.2) (2025-11-08)
+
+
+### Bug Fixes
+
+* change app's domain name pt2 ([3e7c153](https://github.com/Astro-BEAM-AUTh/apps/commit/3e7c153544a669956dff4f7fe46c73668a8d3084))
+
 ## [1.0.1](https://github.com/Astro-BEAM-AUTh/apps/compare/v1.0.0...v1.0.1) (2025-11-08)
 
 
