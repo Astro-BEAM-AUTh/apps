@@ -37,7 +37,7 @@
   "devDependencies": {
     "@angular/build": "^20.0.1",
     "@angular/cli": "^20.0.1",
-    "@angular/compiler-cli": "^20.0.0",
+    "@angular/compiler-cli": "^21.0.3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
