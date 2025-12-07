@@ -78,7 +78,7 @@ export class Step4 implements AfterViewInit, OnDestroy {
             callbacks: {
               title: (items) =>
                 items.length ? `Frequency: ${this.freqs[items[0].dataIndex].toFixed(6)} MHz` : '',
-              label: (item) => `${item.dataset.label}: ${item.parsed.y.toFixed(4)}`,
+              label: (item) => `${item.dataset.label}: ${item.parsed.y?.toFixed(4) ?? 'N/A'}`,
             },
           },
         },

@@ -75,7 +75,7 @@ export class Step3 {
             callbacks: {
               title: (items) =>
                 items.length ? `Frequency: ${freqs[items[0].dataIndex].toFixed(6)} MHz` : '',
-              label: (item) => `Relative Power: ${item.parsed.y.toFixed(3)}`,
+              label: (item) => `Relative Power: ${item.parsed.y?.toFixed(3) ?? 'N/A'}`,
             },
           },
         },
