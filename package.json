@@ -21,9 +21,9 @@
     "@angular/material": "^20.0.2",
     "@angular/platform-browser": "^20.0.0",
     "@angular/router": "^20.0.0",
-    "@dhutaryan/ngx-mat-timepicker": "^19.1.1",
-    "@ng-matero/extensions": "^20.1.0",
-    "@ng-matero/extensions-moment-adapter": "^20.0.0",
+    "@dhutaryan/ngx-mat-timepicker": "^20.1.0",
+    "@ng-matero/extensions": "^21.1.2",
+    "@ng-matero/extensions-moment-adapter": "^21.0.0",
     "angular-plotly.js": "^20.0.0",
     "chart.js": "^4.5.1",
     "d3": "^7.9.0",
@@ -32,7 +32,7 @@
     "plotly.js-dist-min": "^3.3.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.15.1"
+    "zone.js": "~0.16.0"
   },
   "devDependencies": {
     "@angular/build": "^20.0.1",
@@ -54,6 +54,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "semantic-release": "^25.0.2",
-    "typescript": "~5.8.3"
+    "typescript": "~5.9.3"
   }
 }
