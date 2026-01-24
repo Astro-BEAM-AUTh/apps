@@ -13,7 +13,7 @@ updates:
       - "npm"
       - "node"
     assignees:
-      - "dyka3773"
+      - "m-letsios"
     target-branch: "develop"
     ignore:
       - dependency-name: "@angular*"
